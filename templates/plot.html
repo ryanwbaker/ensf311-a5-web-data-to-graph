@@ -1,0 +1,71 @@
+<!-- Author: Ryan Baker -->
+<!-- TODO: Add your HTML for the '/' route here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+    <title>This is a test</title>
+</head>
+
+<body>
+
+    <h1>A COVID-19 Website</h1>
+    <div class="top-container">
+        <!-- Main Menu Start -->
+        <div class="menu-container">
+            <!-- Image on top of the Main menu container -->
+            <img src="https://atheistiran.com/wp-content/uploads/2020/03/people-mask.png" class="TopImage">
+            <ul class="menu shadow">
+                <li>
+                    <a href="{{menu_items[0]['route']}}">{{menu_items[0]['desc']}}</a>
+                </li>
+                <li>
+                    <a href="{{menu_items[1]['route']}}">{{menu_items[1]['desc']}}</a>
+                </li>
+                <li>
+                    <a href="{{menu_items[2]['route']}}">{{menu_items[2]['desc']}}</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Main Menu End -->
+    </div>
+
+    <div class="chart-area">
+        <h3>{{title}}</h3>
+        {{image_tag | safe}}
+    </div>
+    <!-- Footer Start -->
+    <footer id="TblCon">
+
+        <h3>More Information?</h3>
+
+        <div id="footer-links">
+            <div class="organization">
+                <b>WHO</b>
+                <a href="https://www.who.int" target="_blank">
+                    <img src="https://devpolicy.org/wp-content/uploads/2015/02/image13.png" alt="world health organization" style="width:100px">
+                </a>
+            </div>
+            <div class="organization">
+                <b>CORONAVIRUS OUTBREAK</b>
+                <a href="https://www.worldometers.info/coronavirus/" target="_blank">
+                    <img src="https://www.worldometers.info/img/worldometers-logo.gif">
+                </a>
+            </div>
+            <div class="organization">
+                <b>TEMPLATE SOURCE</b>
+                <a href="https://codepen.io/Manouchehr777/pen/NWqYYYa" target="_blank">
+                    <img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" style="width:100px">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+
+</html>
